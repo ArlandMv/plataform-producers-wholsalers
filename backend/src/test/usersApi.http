@@ -1,0 +1,36 @@
+@api = http://localhost:4000/api 
+
+GET {{api}}/users
+###
+
+GET {{api}}/users/'23642802'
+
+###
+POST {{api}}/users
+Content-Type: application/json
+
+{
+    "rut": "12345678",
+    "dv": "9",
+    "nombre": "Jhon",
+    "apellidopno": "White",
+    "apellidomno": "Doe",
+    "email": "jwd@gmail.com",
+    "contrasena": "jwd" 
+}
+
+###
+DELETE {{api}}/users/'12345678'
+
+###
+PUT  {{api}}/users/123
+Content-Type: application/json
+
+{
+    "nombre": "Jane",
+    "apellidopno": "White",
+    "apellidomno": "Doe",
+    "email": "jwd@gmail.com",
+    "contrasena": "jwd", 
+    "rut": "12345678"
+}
